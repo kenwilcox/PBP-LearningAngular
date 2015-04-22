@@ -10,12 +10,13 @@
     function AdminController(logger) {
         var vm = this;
         vm.title = 'Admin';
-        vm.people = getData();
+        vm.people = [];
 
         activate();
 
         function activate() {
             logger.info('Activated Admin View');
+            vm.people = getData();
         }
 
         function getData() {
