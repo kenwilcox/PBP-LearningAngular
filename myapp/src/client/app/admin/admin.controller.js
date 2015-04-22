@@ -10,7 +10,7 @@
     function AdminController(logger) {
         var vm = this;
         vm.title = 'Admin';
-        vm.people = ['john', 'jeff', 'barbarosa', 'ken'];
+        vm.people = [{name:'john'}, {name:'jeff'}, {name:'barbarosa'}, {name:'ken'}];
 
         activate();
 
