@@ -5,9 +5,9 @@
         .module('app.admin')
         .controller('AdminController', AdminController);
 
-    AdminController.$inject = ['logger'];
+    AdminController.$inject = ['logger', 'dataservice'];
     /* @ngInject */
-    function AdminController(logger) {
+    function AdminController(logger, dataservice) {
         var vm = this;
         vm.title = 'Admin';
         vm.people = [];
@@ -16,11 +16,8 @@
 
         function activate() {
             logger.info('Activated Admin View');
-            vm.people = getData();
-        }
-
-        function getData() {
-            return [{name:'john'}, {name:'jeff'}, {name:'barbarosa'}, {name:'ken'}];
+            vm.people = dataservice.getPeople();
+            console.log(vm.people);
         }
     }
 })();
