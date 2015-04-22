@@ -16,8 +16,11 @@
 
         function activate() {
             logger.info('Activated Admin View');
-            vm.people = dataservice.getPeople();
-            console.log(vm.people);
+            //vm.people = dataservice.getPeople();
+            //console.log(vm.people);
+            dataservice.getPeople().then(function(data){
+                vm.people = data;
+            });
         }
     }
 })();
