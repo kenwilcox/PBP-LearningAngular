@@ -10,6 +10,7 @@
     function AdminController(logger) {
         var vm = this;
         vm.title = 'Admin';
+        vm.ken = "learn angular";
 
         activate();
 
