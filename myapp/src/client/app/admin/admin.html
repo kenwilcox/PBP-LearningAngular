@@ -3,11 +3,11 @@
         <div class="container">
             <div class="row">
                 <div class="widget wviolet">
-                    <div ht-widget-header title="{{title}}"></div>
+                    <div ht-widget-header title="{{vm.title}}"></div>
                     <div class="widget-content user">
                         <h3>TODO: Implement Your Features</h3>
                         <ul>
-                            <li ng-repeat="person in people">
+                            <li ng-repeat="person in vm.people">
                                 {{person.firstName}}
                             </li>
                         </ul>
