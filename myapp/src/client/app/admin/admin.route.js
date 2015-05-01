@@ -19,7 +19,7 @@
                     url: '/admin',
                     templateUrl: 'app/admin/admin.html',
                     controller: 'AdminController',
-                    controllerAs: 'vm',
+                    //controllerAs: 'vm',
                     title: 'Admin',
                     settings: {
                         nav: 2,
