@@ -5,12 +5,12 @@
         .module('app.admin')
         .controller('AdminController', AdminController);
 
-    AdminController.$inject = ['logger', 'dataservice', '$scope'];
+    AdminController.$inject = ['logger', 'dataservice'];
     /* @ngInject */
-    function AdminController(logger, dataservice, $scope) {
-        //var vm = this;
-        $scope.title = 'Admin';
-        $scope.people = [];
+    function AdminController(logger, dataservice) {
+        var vm = this;
+        vm.title = 'Admin';
+        vm.people = [];
 
         activate();
 
@@ -19,7 +19,7 @@
             //vm.people = dataservice.getPeople();
             //console.log(vm.people);
             dataservice.getPeople().then(function(data){
-                $scope.people = data;
+                vm.people = data;
             });
         }
     }
